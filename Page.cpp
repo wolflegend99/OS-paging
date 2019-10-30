@@ -1,5 +1,7 @@
 #include <bits/stdc++.h>
-#include <chrono>
+#include <chrono>\
+#include <string>
+#include <stdlib.h>
 using namespace std;
 
 #define INITIAL_CHOICE 1;
@@ -12,7 +14,8 @@ int main(int argc, char* argv[]) {
     unsigned long page_number;
     unsigned long offset;
     bool choice = INITIAL_CHOICE; 
-    int status = INITIAL; 
+    int status = INITIAL;
+    bool flag=true;
 
     while(1) {
 
@@ -47,7 +50,7 @@ int main(int argc, char* argv[]) {
                     page_number = address >> 12;
                     
                     offset = address & 0xfff;
-
+                    flag=false;
                     cout << "ADDRESS:\t PAGE NUMBER: \t OFFSET: \n";
                     cout << "----------------------------------------" << endl;
                     cout << address << "\t\t\t" << page_number << "\t " << offset << endl;
